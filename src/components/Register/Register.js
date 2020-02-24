@@ -34,7 +34,7 @@ class Register extends Component {
     })
       .then(response => response.json())
       .then(user => {
-        if (user) {
+        if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
@@ -48,7 +48,7 @@ class Register extends Component {
           <main className="pa4 black-80 ">
             <div className="measure">
               <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                <legend className="ph0 mh0 fw6 clip">Sign Up</legend>
+                <legend className="ph0 mh0 fw6 f1">Register</legend>
                 <div className="mt3">
                   <label className="db fw4 lh-copy f6" htmlFor="yourName">
                     Your name
